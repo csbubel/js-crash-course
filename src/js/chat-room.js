@@ -17,9 +17,10 @@ class ChatRoom {
         this.messages.push(...messages);
     }
 
-    print() {
+    print(messages = this.messages) {
         let output = "";
-        this.messages.forEach(message => output += `${message.toString()}\n`);
+        messages.forEach(message => output += `${message.toString()}\n`);
         console.log(output);
     }
+
 }
