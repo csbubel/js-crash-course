@@ -1,8 +1,6 @@
 # JavaScript Crash Course
 
-This repository is meant to be a crash course on the JavaScript language, and, in particular, ES2015 concepts.
-
-We'll learn about essential language features by developing a small ____ application from scratch - no libraries (assuming your browser supports all ES2015 features).
+This repository is meant to teach the essential language features of JavaScript by developing a mock chat application from scratch - no libraries (assuming your browser supports all ES2015 features).
 
 Major concepts include:
 
