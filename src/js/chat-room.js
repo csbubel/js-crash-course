@@ -8,6 +8,15 @@ class ChatRoom {
         return this.messages;
     }
 
+    getMessagesFromDb(callback) {
+        new DB().getMessages().then(messages => {
+            this.addMessages(...messages);
+            callback(messages);
+        }).catch(err => {
+            console.log(err);
+        });
+    }
+
     getAdminMessages() {
         const toBeFiltered = [...this.messages]; // Not needed, just demonstrating const and spread
         return toBeFiltered.filter(message => message instanceof AdminMessage);
@@ -30,6 +39,6 @@ class ChatRoom {
     print(messages = this.messages) {
         let output = ""; // Let is the new var - the value can change
         messages.forEach(message => output += `${message.toString()}\n`); // Back ticks denote string template
-        console.log(output);
+        return output;
     }
 }
