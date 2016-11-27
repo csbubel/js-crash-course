@@ -6,9 +6,8 @@ Major concepts include:
 
 * Object oriented features (classes, inheritance, etc.)
 * Variable declarations (let and const)
-* Function declarations
+* Arrow functions
 * Template strings
-* Array comprehensions
 * Modules
 * Promises
 * Maps and sets
