@@ -2,6 +2,8 @@
 
 This repository is meant to be a crash course on the JavaScript language, and, in particular, ES2015 concepts.
 
+We'll learn about essential language features by developing a small ____ application from scratch - no libraries (assuming your browser supports all ES2015 features).
+
 Major concepts include:
 
 * Object oriented features (classes, inheritance, etc.)
@@ -12,3 +14,4 @@ Major concepts include:
 * Modules
 * Promises
 * Maps and sets
+* Default, rest, and spread
