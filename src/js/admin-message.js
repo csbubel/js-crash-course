@@ -1,9 +1,9 @@
 class AdminMessage extends Message {
-    constructor(author, content) {
-        super(author, content);
+    constructor(author, content, timestamp) {
+        super(author, content, timestamp);
     }
 
-    toString() {
+    toString() { // Overriding super class function
         return `(ADMIN) ${super.toString()}`;
     }
 }

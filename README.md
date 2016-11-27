@@ -8,7 +8,6 @@ Major concepts include:
 * Variable declarations (let and const)
 * Arrow functions
 * Template strings
-* Modules
 * Promises
 * Maps and sets
 * Default, rest, and spread
