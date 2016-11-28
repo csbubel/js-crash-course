@@ -71,7 +71,7 @@ waitAndGo().then(message => {
 let m = new Map();
 m.set(1, "one");
 m.set(2, "two");
-for(let [key, value] of m) console.log(key, value);
+for(const [key, value] of m) console.log(key, value);
 
 let s = new Set();
 s.add("Sedan");
