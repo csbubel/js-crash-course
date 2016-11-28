@@ -12,20 +12,16 @@ This repository is meant to teach the essential language features of JavaScript 
 
 ### Major concepts include:
 
-class Sedan extends Vehicle {
-    constructor(color) {
-        this.color = color;
-    }
-
-    drive() {
-        
-    }
-}
-
 * Object oriented features (classes, inheritance, etc.)
+    class Sedan extends Vehicle {
+        constructor(color) {
+            this.color = color;
+        }
 
-    
+        drive() {
 
+        }
+    }
 * Variable declarations (let and const)
 * Arrow functions
 * Template strings
