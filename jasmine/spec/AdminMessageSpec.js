@@ -4,12 +4,12 @@ describe("AdminMessage", function() {
 
     it("should have a timestamp if passed in", function() {
         let m = new AdminMessage(author, content, new Date());
-        expect(m.timestamp).not.toBe(null);
+        expect(m.timestamp).not.toBe(undefined);
     });
     
     it("should have a timestamp without being passed in", function() {
         let m = new AdminMessage(author, content);
-        expect(m.timestamp).not.toBe(null);
+        expect(m.timestamp).not.toBe(undefined);
     });
 
     it("should have a proper toString", function() {

@@ -3,8 +3,9 @@ let DB = function() {
     const message2 = new Message("Natalie", "Well, sort of.");
     const messages = [message1, message2];
 
-    // Should return a promise which resolves after 250 with a call to setTimeout
     this.getMessages = function() {
-        
+        return new Promise((resolve, reject) => {
+            setTimeout(() => resolve(messages), 250);
+        });
     };
 };

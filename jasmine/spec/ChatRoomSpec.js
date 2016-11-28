@@ -21,8 +21,8 @@ describe("ChatRoom", function() {
     });
 
     it("should be able to return unique authors of all messages", function() {
-        let cr = new ChatRoom(title, [m1, m2]);
-        expect(cr.getUniqueAuthors()).toBe("Author");
+        let cr = new ChatRoom(title, [m1, m2, new AdminMessage("John", "Hello")]);
+        expect(cr.getUniqueAuthors()).toBe("Author, John");
     });
 
     it("should be able to add one message", function() {

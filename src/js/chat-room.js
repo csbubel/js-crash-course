@@ -1,44 +1,46 @@
 class ChatRoom {
-    constructor(title, messages = []) { // Default = means messages will be an empty array if not passed or undefined
-        this.title = title;
-        this.messages = messages;
+
+    // Should take in a title and messages which should default to []
+    // Use ES2015 defaults to set messages equal to an empty array
+    constructor(/* 2 args */) {
+
     }
 
+    // Should return messages
     getMessages() {
-        return this.messages;
+
     }
 
-    getMessagesFromDb(callback) {
-        new DB().getMessages().then(messages => {
-            this.addMessages(...messages);
-            callback(messages);
-        }).catch(err => {
-            console.log(err);
-        });
+    // Should make a call to DB.getMessages() in data/mock-messages.js, which returns a promise
+    // Use then and catch to appropriately handle the promise
+    // When the promise resolves, the messages should be added to this object using this.addMessages()
+    // This method should also take in a callback which is called when the promise is resolved, e.g., 'callback(messages)'
+    getMessagesFromDb(/* arg */) {
+
     }
 
+    // Should return only those messages that are AdminMessages
+    // Consider using filters, arrow functions, and/or spreads
     getAdminMessages() {
-        const toBeFiltered = [...this.messages]; // Not needed, just demonstrating const and spread
-        return toBeFiltered.filter(message => message instanceof AdminMessage);
+
     }
 
+    // Should return a string of unique author names, e.g., John, Mary
+    // Consider using a set, arrow functions, and string templates
     getUniqueAuthors() {
-        let s = new Set();
-        this.messages.forEach(message => s.add(message.author)); // Set maintains unique items
 
-        let output = "";
-        for (let a of s.keys()) output += `${a.toString()}, `;
-        output = output.slice(0, -2); // Remove the last two chars
-        return output;
     }
 
-    addMessages(...messages) { // Rest operator ... means messages is an array
-        this.messages.push(...messages); // Spread operator ... will cause each item to be pushed
+    // Should be able to add one or more messages to this object's messages array
+    // Consider using the spread and rest operators
+    addMessages(/* arg */) {
+
     }
 
-    print(messages = this.messages) {
-        let output = ""; // Let is the new var - the value can change
-        messages.forEach(message => output += `${message.toString()}\n`); // Back ticks denote string template
-        return output;
+    // Should print out all messages if not given an argument, or print out messages given
+    // Messages should be on new lines
+    // Consider using defaults, forEach, arrow functions, and string templates
+    print(/* */) {
+
     }
 }
