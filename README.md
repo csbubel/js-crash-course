@@ -15,73 +15,87 @@ This repository is meant to teach the essential language features of JavaScript 
 * Object oriented features (classes, inheritance, etc.)
 
 ```javascript
-    class Sedan extends Vehicle {
-        constructor(color) {
-            this.color = color;
-        }
-
-        drive() {
-
-        }
+class Sedan extends Vehicle {
+    constructor(color) {
+        this.color = color;
     }
+
+    drive() {
+
+    }
+}
 ```
         
 * Variable declarations (let and const)
 
-        const numWheels = 4; // Cannot be reassigned
-        let color = "Blue" // May be reassigned
+```javascript
+const numWheels = 4; // Cannot be reassigned
+let color = "Blue" // May be reassigned
+```
 
 * Arrow functions
 
-        cars.forEach(car => car.drive());
+```javascript
+cars.forEach(car => car.drive());
+```
 
 * Template strings
 
-        const description = `The car is ${this.color} and has ${this.numWheels} wheels.`;
+```javascript
+const description = `The car is ${this.color} and has ${this.numWheels} wheels.`;
+```
 
 * Promises
 
-        function waitAndGo() {
-            return new Promise((resolve, reject) => {
-                setTimeout(() => resolve("Done"), 1000);
-            });
-        }
-        
-        waitAndGo().then(message => {
-            console.log(message);
-        });
+```javascript
+function waitAndGo() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve("Done"), 1000);
+    });
+}
+
+waitAndGo().then(message => {
+    console.log(message);
+});
+```
 
 * Maps and sets
 
-        let s = new Set();
-        s.add("Sedan");
-        s.add("Sedan");
-        console.log(s); // Set {"Sedan"}
+```javascript
+let s = new Set();
+s.add("Sedan");
+s.add("Sedan");
+console.log(s); // Set {"Sedan"}
+```
 
 * Default, rest, and spread
 
-        // Default
-        function(name = "Anonymous") {
-            const output = `Hello ${name}`;
-        }
+```javascript
+// Default
+function(name = "Anonymous") {
+    const output = `Hello ${name}`;
+}
 
-        // Rest
-        function manyArgs(...args) {
-            console.log(args.length);
-        }
-        
-        // Spread
-        function addToArray(anArray) {
-            someOtherArray.push(...anArray);
-        }
+// Rest
+function manyArgs(...args) {
+    console.log(args.length);
+}
+
+// Spread
+function addToArray(anArray) {
+    someOtherArray.push(...anArray);
+}
+```
 
 * Destructuring
 
-        function multipleReturns() {
-            const result1 = 3.14;
-            const result2 = 2.72;
-            return [result1, result2];
-        }
-        
-        let a, b;
-        [a, b] = multipleReturns(); // a = 3.14, b = 2.72
+```javascript
+function multipleReturns() {
+    const result1 = 3.14;
+    const result2 = 2.72;
+    return [result1, result2];
+}
+
+let a, b;
+[a, b] = multipleReturns(); // a = 3.14, b = 2.72
+```
