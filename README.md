@@ -1,6 +1,6 @@
 # JavaScript Crash Course
 
-This repository is meant to teach the essential language features of JavaScript by developing a mock chat application from scratch - no libraries, except Jasmine (assuming your browser supports all ES2015 features).
+This repository is meant to teach the essential language features of JavaScript by developing a mock chat application from scratch - no libraries (assuming your browser supports all ES2015/ES6 features), except Jasmine.
 
 ### How does this crash course work?
 
@@ -9,6 +9,12 @@ This repository is meant to teach the essential language features of JavaScript 
 3. Notice that Jasmine unit tests are being run, but they're all failing
 4. Fill out the code in `/src/js` so that the unit tests pass
 5. Reference the `/ref/js` directory if you get stuck
+
+### Useful links:
+
+* [ES2015 compatibility chart](https://kangax.github.io/compat-table/es6/)
+* [Babel document on ES2015 features](https://babeljs.io/docs/learn-es2015/)
+* [Mozilla JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 ### Major concepts include:
 
