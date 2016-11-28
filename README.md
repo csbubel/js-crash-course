@@ -25,8 +25,18 @@ This repository is meant to teach the essential language features of JavaScript 
         }
         
 * Variable declarations (let and const)
+
+        const numWheels = 4; // Cannot be reassigned
+        let color = "Blue" // May be reassigned
+
 * Arrow functions
+
+        cars.forEach(car => car.drive());
+
 * Template strings
+
+        const description = `The car is ${this.color} and has ${this.numWheels} wheels.`;
+
 * Promises
 * Maps and sets
 * Default, rest, and spread
