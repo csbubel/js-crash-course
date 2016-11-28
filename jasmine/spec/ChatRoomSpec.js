@@ -50,6 +50,8 @@ describe("ChatRoom", function() {
     });
 
     describe("asynchronous specs", function() {
+        let originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
+        jasmine.DEFAULT_TIMEOUT_INTERVAL = 250;
         let cr;
 
         beforeEach(function(done) {
@@ -62,6 +64,10 @@ describe("ChatRoom", function() {
         it("should pull 2 messages from mock DB by promise", function(done) {
             expect(cr.getMessages().length).toEqual(2);
             done();
+        });
+
+        afterEach(function() {
+            jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
         });
     });
 });

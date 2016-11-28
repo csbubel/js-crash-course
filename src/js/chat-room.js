@@ -14,7 +14,7 @@ class ChatRoom {
     // Should make a call to DB.getMessages() in data/mock-messages.js, which returns a promise
     // Use then and catch to appropriately handle the promise
     // When the promise resolves, the messages should be added to this object using this.addMessages()
-    // This method should also take in a callback which is called when the promise is resolved, e.g., 'callback(messages)'
+    // This method should also take in a callback which is called when the promise is resolved, e.g., 'callback()'
     getMessagesFromDb(/* arg */) {
 
     }

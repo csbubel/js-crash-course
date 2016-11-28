@@ -5,7 +5,7 @@ let DB = function() {
 
     this.getMessages = function() {
         return new Promise((resolve, reject) => {
-            setTimeout(() => resolve(messages), 250);
+            setTimeout(() => resolve(messages), 100);
         });
     };
 };
