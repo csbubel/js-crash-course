@@ -68,6 +68,11 @@ waitAndGo().then(message => {
 * Maps and sets
 
 ```javascript
+let m = new Map();
+m.set(1, "one");
+m.set(2, "two");
+for(let [key, value] of m) console.log(key, value);
+
 let s = new Set();
 s.add("Sedan");
 s.add("Sedan");
