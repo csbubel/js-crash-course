@@ -11,6 +11,7 @@ This repository is meant to teach the essential language features of JavaScript 
 * Promises
 * Maps and sets
 * Default, rest, and spread
+* Destructuring
 
 ### How does this crash course work?
 
