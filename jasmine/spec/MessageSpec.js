@@ -12,6 +12,13 @@ describe("Message", function() {
         expect(m.timestamp).not.toBe(undefined);
     });
 
+    it("should have a constructor that accepts author, content, and possibly timestamp", function() {
+        let m = new Message(author, content);
+        expect(m.author).not.toBe(undefined);
+        expect(m.content).not.toBe(undefined);
+        expect(m.timestamp).not.toBe(undefined);
+    });
+
     it("should have a proper toString", function() {
         let m = new Message(author, content);
         expect(m.toString()).toBe(`${author} : ${content}`);    

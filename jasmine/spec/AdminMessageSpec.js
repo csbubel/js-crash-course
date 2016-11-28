@@ -12,9 +12,16 @@ describe("AdminMessage", function() {
         expect(m.timestamp).not.toBe(undefined);
     });
 
+    it("should have a constructor that accepts author, content, and possibly timestamp", function() {
+        let m = new AdminMessage(author, content);
+        expect(m.author).not.toBe(undefined);
+        expect(m.content).not.toBe(undefined);
+        expect(m.timestamp).not.toBe(undefined);
+    });
+
     it("should have a proper toString", function() {
         let m = new AdminMessage(author, content);
-        expect(m.toString()).toBe(`(ADMIN) ${author} : ${content}`);    
+        expect(m.toString()).toEqual(`(ADMIN) ${author} : ${content}`);    
     });
 
     it("should have a 'likes' property", function() {
