@@ -83,7 +83,7 @@ console.log(s); // Set {"Sedan"}
 
 ```javascript
 // Default
-function(name = "Anonymous") {
+function greet(name = "Anonymous") {
     const output = `Hello ${name}`;
 }
 
