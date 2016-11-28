@@ -30,6 +30,8 @@ class Sedan extends Vehicle {
 
     }
 }
+
+let s = new Sedan("Blue");
 ```
         
 * Variable declarations (let and const)
