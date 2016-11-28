@@ -50,13 +50,13 @@ describe("ChatRoom", function() {
     it("should have a function that prints out its own messages", function() {
         const cr = new ChatRoom(title);
         cr.addMessages(m1, m2);
-        expect(cr.print()).toBe(`${m1.toString()}\n${m2.toString()}\n`);
+        expect(cr.print()).toBe(`${m1.toString()}\n${m2.toString()}`);
     });
 
     it("should have a print function that can be passed messages", function() {
         const cr = new ChatRoom(title);
         cr.addMessages(m1, m2);
-        expect(cr.print(cr.getAdminMessages())).toBe(`${m2.toString()}\n`);
+        expect(cr.print(cr.getAdminMessages())).toBe(`${m2.toString()}`);
     });
 
     describe("asynchronous specs", function() {

@@ -38,7 +38,6 @@ class ChatRoom {
     }
 
     // Should print the message stats returned from the getMessageStates function, e.g., '5, 20'.
-    // Consider using array destructuring and string templates.
     printMessageStats() {
         
     }
@@ -51,7 +50,6 @@ class ChatRoom {
 
     // Should print out all messages if not given an argument, or print out messages given.
     // Messages should be on new lines.
-    // Consider using defaults, forEach, arrow functions, and string templates.
     print(/* */) {
 
     }

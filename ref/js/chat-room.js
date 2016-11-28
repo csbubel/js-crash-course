@@ -33,6 +33,7 @@ class ChatRoom {
     }
 
     getMessageStats() {
+        if(this.messages.length === 0) return [0, 0];
         let shortest = Number.MAX_SAFE_INTEGER, longest = 0, l;
         
         for(const m of this.messages) {
@@ -45,9 +46,7 @@ class ChatRoom {
     }
 
     printMessageStats() {
-        let shortest, longest;
-        [shortest, longest] = this.getMessageStats();
-        return `${shortest}, ${longest}`;
+        return this.getMessageStats().join(", ");
     }
 
     addMessages(...messages) { // Rest operator ... means messages is an array
@@ -55,8 +54,6 @@ class ChatRoom {
     }
 
     print(messages = this.messages) {
-        let output = ""; // Let is the new var - the value can change
-        messages.forEach(message => output += `${message.toString()}\n`); // Back ticks denote string template
-        return output;
+        return messages.join("\n");
     }
 }
