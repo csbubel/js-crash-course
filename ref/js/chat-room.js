@@ -11,7 +11,7 @@ class ChatRoom {
     getMessagesFromDb(callback) {
         new DB().getMessages().then(messages => {
             this.addMessages(...messages);
-            callback(messages);
+            callback();
         }).catch(err => {
             console.log(err);
         });
