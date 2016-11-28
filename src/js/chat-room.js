@@ -31,6 +31,18 @@ class ChatRoom {
 
     }
 
+    // Should compute the shortest and longest message lengths.
+    // Should return an array [shortest, longest] to be destructured later.
+    getMessageStats() {
+        
+    }
+
+    // Should print the message stats returned from the getMessageStates function, e.g., '5, 20'.
+    // Consider using array destructuring and string templates.
+    printMessageStats() {
+        
+    }
+
     // Should be able to add one or more messages to this object's messages array.
     // Consider using the spread and rest operators.
     addMessages(/* arg */) {

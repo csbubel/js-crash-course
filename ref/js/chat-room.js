@@ -27,9 +27,27 @@ class ChatRoom {
         this.messages.forEach(message => s.add(message.author)); // Set maintains unique items
 
         let output = "";
-        for (let a of s.keys()) output += `${a.toString()}, `;
+        for (let a of s) output += `${a.toString()}, `;
         output = output.slice(0, -2); // Remove the last two chars
         return output;
+    }
+
+    getMessageStats() {
+        let shortest = Number.MAX_SAFE_INTEGER, longest = 0, l;
+        
+        for(const m of this.messages) {
+            l = m.content.length;
+            shortest = l < shortest ? l : shortest;
+            longest = l > longest ? l : longest;
+        }
+
+        return [shortest, longest];
+    }
+
+    printMessageStats() {
+        let shortest, longest;
+        [shortest, longest] = this.getMessageStats();
+        return `${shortest}, ${longest}`;
     }
 
     addMessages(...messages) { // Rest operator ... means messages is an array

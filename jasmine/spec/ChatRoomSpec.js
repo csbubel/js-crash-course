@@ -25,6 +25,16 @@ describe("ChatRoom", function() {
         expect(cr.getUniqueAuthors()).toBe("Author, John");
     });
 
+    it("should be able to return the shortest and longest message lengths as an array", function() {
+        let cr = new ChatRoom(title, [m1, new Message(author, "Hello")]);
+        expect(cr.getMessageStats()).toEqual([5, 13]);
+    });
+
+    it("should be able to print the shortest and longest message lengths", function() {
+        let cr = new ChatRoom(title, [m1, new Message(author, "Hello")]);
+        expect(cr.printMessageStats()).toEqual("5, 13");
+    });
+
     it("should be able to add one message", function() {
         let cr = new ChatRoom(title);
         cr.addMessages(m1);
